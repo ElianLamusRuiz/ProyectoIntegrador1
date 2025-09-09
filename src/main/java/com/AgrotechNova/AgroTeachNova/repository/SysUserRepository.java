@@ -1,5 +1,8 @@
 package com.AgrotechNova.AgroTeachNova.repository;
 
-public interface SysUserRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.AgrotechNova.AgroTeachNova.SysUser;
 
+public interface SysUserRepository extends JpaRepository<SysUser,Long> {
+	SysUser findByUsername(String username); 
 }
