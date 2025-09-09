@@ -1,5 +1,8 @@
 package com.AgrotechNova.AgroTeachNova;
 
+import jakarta.persistence.*;
+
+
 public class Service {
     private int idservice;
     private String serviceName;

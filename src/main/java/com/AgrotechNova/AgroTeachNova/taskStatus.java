@@ -1,7 +1,13 @@
-
 package com.AgrotechNova.AgroTeachNova;
 
+import jakarta.persistence.*;
+
+
+
+import jakarta.persistence.*;
+
 public class TaskStatus {
+
   private int idtaskStatus;
   private String description;
 

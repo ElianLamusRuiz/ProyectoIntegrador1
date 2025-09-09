@@ -1,5 +1,7 @@
 package com.AgrotechNova.AgroTeachNova;
+
 import java.util.Date;
+import jakarta.persistence.*;
 
 public class Project {
     private int idproject;

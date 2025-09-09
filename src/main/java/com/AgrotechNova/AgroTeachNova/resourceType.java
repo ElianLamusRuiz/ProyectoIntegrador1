@@ -1,4 +1,7 @@
 package com.AgrotechNova.AgroTeachNova;
+
+import jakarta.persistence.*;
+
 public class ResourceType {
     private int idresourceType;
     private String name;

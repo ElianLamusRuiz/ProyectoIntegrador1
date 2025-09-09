@@ -1,5 +1,7 @@
 package com.AgrotechNova.AgroTeachNova;
 
+import jakarta.persistence.*;
+
 public class Project_has_resources {
     private Project idproject;
     private Resources idresources;
