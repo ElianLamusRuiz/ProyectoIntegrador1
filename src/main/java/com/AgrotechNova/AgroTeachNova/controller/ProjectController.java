@@ -19,6 +19,6 @@ public class ProjectController {
     // Endpoint de prueba para mañana empezar a expandir
     @GetMapping
     public List<Project> getAllProject() {
-        return ProjectService.getAllProject();
+        return ProjectService.getAll();
     }
 }

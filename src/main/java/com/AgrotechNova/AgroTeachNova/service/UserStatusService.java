@@ -15,7 +15,7 @@ public class UserStatusService {
         this.userStatusRepository = userStatusRepository;
     }
 
-    public List<UserStatus> getAllUserStatuses() {
+    public List<UserStatus> getAll() {
         return userStatusRepository.findAll();
     }
 }

@@ -18,6 +18,6 @@ public class TaskController {
 
     @GetMapping
     public List<Task> getAllTask() {
-        return taskService.getAllTask();
+        return taskService.getAll();
     }
 }

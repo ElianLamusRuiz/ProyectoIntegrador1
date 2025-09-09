@@ -15,27 +15,8 @@ public class SysUserService {
         this.sysUserRepository = sysUserRepository;
     }
 
-    // Aquí mañana implementar los métodos: findAll, create, delete, etc.
-
-
-     public List<SysUser> getAllUsers() {
+    // Aquí mañana implementarás los métodos: findAll, create, delete, etc.
+    public List<SysUser> getAllUsers() {
         return sysUserRepository.findAll();
     }
-
-    public SysUser getUserById(Long id) {
-        return sysUserRepository.findById(id).orElse(null);
-    }
-
-    public SysUser createUser(SysUser user) {
-        return sysUserRepository.save(user);
-    }
-
-    public void deleteUser(Long id) {
-        sysUserRepository.deleteById(id);
-    }
-
-    public SysUser getUserByUsername(String username) {
-        return sysUserRepository.findByUsername(username);
-    }
-
 }

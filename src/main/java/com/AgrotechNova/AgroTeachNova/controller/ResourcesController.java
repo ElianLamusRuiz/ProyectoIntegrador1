@@ -18,6 +18,6 @@ public class ResourcesController {
 
     @GetMapping
     public List<Resources> getAllResources() {
-        return resourcesService.getAllResources();
+        return resourcesService.getAll();
     }
 }

@@ -15,7 +15,7 @@ public class TaskReportService {
         this.taskReportRepository = taskReportRepository;
     }
 
-    public List<TaskReport> getAllTaskReports() {
+    public List<TaskReport> getAll() {
         return taskReportRepository.findAll();
     }
 }

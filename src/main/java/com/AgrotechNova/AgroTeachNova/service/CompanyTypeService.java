@@ -15,7 +15,7 @@ public class CompanyTypeService {
         this.companyTypeRepository = companyTypeRepository;
     }
 
-    public List<CompanyType> getAllCompanyTypes() {
+    public List<CompanyType> getAll() {
         return companyTypeRepository.findAll();
     }
 }

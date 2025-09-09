@@ -18,6 +18,6 @@ public class UserRoleController {
 
     @GetMapping
     public List<UserRole> getAllUserRole() {
-        return userRoleService.getAllUserRole();
+        return userRoleService.getAll();
     }
 }

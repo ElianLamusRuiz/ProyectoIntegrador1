@@ -15,7 +15,7 @@ public class TaskStatusService {
         this.taskStatusRepository = taskStatusRepository;
     }
 
-    public List<TaskStatus> getAllTaskStatuses() {
+    public List<TaskStatus> getAll() {
         return taskStatusRepository.findAll();
     }
 }

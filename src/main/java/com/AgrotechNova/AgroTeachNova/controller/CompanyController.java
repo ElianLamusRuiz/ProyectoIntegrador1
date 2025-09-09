@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/companies") // 👈 Ruta corregida
 public class CompanyController {
 
-    private final CompanyService CompanyService;
+    private final CompanyService companyService; // 👈 en minúscula
 
-    public CompanyController(CompanyService CompanyService) {
-        this.CompanyService = CompanyService;
+    public CompanyController(CompanyService companyService) {
+        this.companyService = companyService;
     }
 
     // Endpoint de prueba para mañana empezar a expandir
     @GetMapping
     public List<Company> getAllCompany() {
-        return CompanyService.getAllCompany();
-    }
+        return companyService.getAll(); // 👈 uso correcto
+    }
 }

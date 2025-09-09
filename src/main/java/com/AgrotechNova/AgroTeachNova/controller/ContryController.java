@@ -1,7 +1,7 @@
 package com.AgrotechNova.AgroTeachNova.controller;
 
-import com.AgrotechNova.AgroTeachNova.Contry;
-import com.AgrotechNova.AgroTeachNova.service.ContryService;
+import com.AgrotechNova.AgroTeachNova.Country;
+import com.AgrotechNova.AgroTeachNova.service.CountryService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,15 +10,15 @@ import java.util.List;
 @RequestMapping("/api/users")
 public class ContryController {
 
-    private final ContryService ContryService;
+    private final CountryService ContryService;
 
-    public ContryController(ContryService ContryService) {
+    public ContryController(CountryService ContryService) {
         this.ContryService = ContryService;
     }
 
     // Endpoint de prueba para mañana empezar a expandir
     @GetMapping
-    public List<Contry> getAllContry() {
-        return ContryService.getAllContry();
+    public List<Country> getAllContry() {
+        return ContryService.getAll();
     }
 }

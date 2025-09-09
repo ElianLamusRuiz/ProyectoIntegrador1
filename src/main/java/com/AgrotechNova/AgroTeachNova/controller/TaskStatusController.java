@@ -18,6 +18,6 @@ public class TaskStatusController {
 
     @GetMapping
     public List<TaskStatus> getAllTaskStatus() {
-        return taskStatusService.getAllTaskStatus();
+        return taskStatusService.getAll();
     }
 }

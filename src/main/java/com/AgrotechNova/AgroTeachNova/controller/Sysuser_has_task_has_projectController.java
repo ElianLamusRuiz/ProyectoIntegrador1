@@ -18,6 +18,6 @@ public class Sysuser_has_task_has_projectController {
 
     @GetMapping
     public List<Sysuser_has_task_has_project> getAllSysuser_has_task_has_project() {
-        return sysuser_has_task_has_projectService.getAllSysuser_has_task_has_project();
+        return sysuser_has_task_has_projectService.getAll();
     }
 }

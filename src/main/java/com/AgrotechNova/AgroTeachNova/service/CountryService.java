@@ -15,7 +15,7 @@ public class CountryService {
         this.countryRepository = countryRepository;
     }
 
-    public List<Country> getAllCountries() {
+    public List<Country> getAll() {
         return countryRepository.findAll();
     }
 }

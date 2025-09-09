@@ -18,6 +18,6 @@ public class StateController {
 
     @GetMapping
     public List<State> getAllState() {
-        return stateService.getAllState();
+        return stateService.getAll();
     }
 }

@@ -18,6 +18,6 @@ public class UserStatusController {
 
     @GetMapping
     public List<UserStatus> getAllUserStatus() {
-        return userStatusService.getAllUserStatus();
+        return userStatusService.getAll();
     }
 }

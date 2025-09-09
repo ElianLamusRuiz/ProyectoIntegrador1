@@ -18,6 +18,6 @@ public class TaskReportController {
 
     @GetMapping
     public List<TaskReport> getAllTaskReport() {
-        return taskReportService.getAllTaskReport();
+        return taskReportService.getAll();
     }
 }

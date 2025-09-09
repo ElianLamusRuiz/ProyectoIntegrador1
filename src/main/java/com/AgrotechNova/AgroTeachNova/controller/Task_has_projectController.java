@@ -18,6 +18,6 @@ public class Task_has_projectController {
 
     @GetMapping
     public List<Task_has_project> getAllTask_has_project() {
-        return task_has_projectService.getAllTask_has_project();
+        return task_has_projectService.getAll();
     }
 }

@@ -19,6 +19,6 @@ public class CityController {
     // Endpoint de prueba para mañana empezar a expandir
     @GetMapping
     public List<City> getAllCities() {
-        return CityService.getAllCities();
+        return CityService.getAll();
     }
 }

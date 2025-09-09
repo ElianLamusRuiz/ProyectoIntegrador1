@@ -15,7 +15,7 @@ public class ResourceTypeService {
         this.resourceTypeRepository = resourceTypeRepository;
     }
 
-    public List<ResourceType> getAllResourceTypes() {
+    public List<ResourceType> getAll() {
         return resourceTypeRepository.findAll();
     }
 }

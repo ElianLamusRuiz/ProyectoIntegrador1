@@ -18,6 +18,6 @@ public class Project_has_resourcesController {
 
     @GetMapping
     public List<Project_has_resources> getAllProject_has_resources() {
-        return project_has_resourcesService.getAllProject_has_resources();
+        return project_has_resourcesService.getAll();
     }
 }

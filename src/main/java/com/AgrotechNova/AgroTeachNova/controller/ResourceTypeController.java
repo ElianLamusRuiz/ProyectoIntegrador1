@@ -18,6 +18,6 @@ public class ResourceTypeController {
 
     @GetMapping
     public List<ResourceType> getAllResourceType() {
-        return resourceTypeService.getAllResourceType();
+        return resourceTypeService.getAll();
     }
 }

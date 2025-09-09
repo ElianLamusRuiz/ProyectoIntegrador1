@@ -19,6 +19,6 @@ public class Company_has_cityController {
     // Endpoint de prueba para mañana empezar a expandir
     @GetMapping
     public List<Company_has_city> getAllCompany_has_city() {
-        return Company_has_cityService.getAllCompany_has_city();
+        return Company_has_cityService.getAll();
     }
 }

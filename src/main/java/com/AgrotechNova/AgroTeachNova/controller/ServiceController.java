@@ -18,6 +18,6 @@ public class ServiceController {
 
     @GetMapping
     public List<Service> getAllService() {
-        return serviceService.getAllService();
+        return serviceService.getAll();
     }
 }

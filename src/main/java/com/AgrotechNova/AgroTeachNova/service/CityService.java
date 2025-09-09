@@ -3,7 +3,6 @@ package com.AgrotechNova.AgroTeachNova.service;
 import com.AgrotechNova.AgroTeachNova.City;
 import com.AgrotechNova.AgroTeachNova.repository.CityRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -15,7 +14,7 @@ public class CityService {
         this.cityRepository = cityRepository;
     }
 
-    public List<City> getAllCities() {
-        return cityRepository.findAllCities();
+    public List<City> getAll() {
+        return cityRepository.findAll();
     }
 }
