@@ -6,7 +6,8 @@ public class CompanyType {
 
 	private int idcompanyType;
 	private String description;
-	
+
+	public CompanyType(){}
 	
 	public CompanyType(int idcompanyType, String description) {
 		super();
