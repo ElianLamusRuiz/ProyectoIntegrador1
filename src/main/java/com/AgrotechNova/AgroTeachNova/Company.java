@@ -11,6 +11,7 @@ public class Company {
 	private String mision;
 	private String vision;
 	
+public Company()
 	
 	public Company(int idcompany, String companyName, CompanyType companyType, String description, String mision,
 			String vision) {
