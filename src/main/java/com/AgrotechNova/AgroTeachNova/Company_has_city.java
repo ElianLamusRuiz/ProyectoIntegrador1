@@ -7,7 +7,7 @@ public class Company_has_city {
 	private Company company;
 	private City city;
 	
-	
+	public Company_has_city(){}
 	
 	public Company_has_city(Company company, City city) {
 		super();
