@@ -1,5 +1,7 @@
 package com.AgrotechNova.AgroTeachNova;
 
+import jakarta.persistence.*;
+
 public class Sysuser_has_task_has_project {
 
     private int sysuser_idsysuser;
