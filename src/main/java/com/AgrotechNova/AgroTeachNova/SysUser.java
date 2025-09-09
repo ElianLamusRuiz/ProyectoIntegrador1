@@ -10,10 +10,39 @@ public class SysUser {
 	    private String userLastname;
 	    private String email;
 	    private String password;
-
+	    private UserStatus userStatus;
+	    private Company company;
 	    private UserRole role;
-	    
+	   
 
+		public SysUser(int idsysuser, String userName, String userLastname, String email, String password,
+				UserStatus userStatus, Company company, UserRole role) {
+			super();
+			this.idsysuser = idsysuser;
+			this.userName = userName;
+			this.userLastname = userLastname;
+			this.email = email;
+			this.password = password;
+			this.userStatus = userStatus;
+			this.company = company;
+			this.role = role;
+		}
+
+		public UserStatus getUserStatus() {
+			return userStatus;
+		}
+
+		public void setUserStatus(UserStatus userStatus) {
+			this.userStatus = userStatus;
+		}
+
+		public Company getCompany() {
+			return company;
+		}
+
+		public void setCompany(Company company) {
+			this.company = company;
+		}
 
 		public int getIdsysuser() {
 			return idsysuser;
