@@ -16,9 +16,7 @@ public class SysUserService {
     }
 
     // Aquí mañana implementar los métodos: findAll, create, delete, etc.
-    public List<SysUser> getAllUsers() {
-        return sysUserRepository.findAll();
-    }
+
 
      public List<SysUser> getAllUsers() {
         return sysUserRepository.findAll();
