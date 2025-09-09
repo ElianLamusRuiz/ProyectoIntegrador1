@@ -1,14 +1,14 @@
 
 package com.AgrotechNova.AgroTeachNova;
 
-public class taskStatus {
+public class TaskStatus {
   private int idtaskStatus;
   private String description;
 
-  public taskStatus() {
+  public TaskStatus() {
   }
 
-  public taskStatus(int idtaskStatus, String description) {
+  public TaskStatus(int idtaskStatus, String description) {
     this.idtaskStatus = idtaskStatus;
     this.description = description;
   }

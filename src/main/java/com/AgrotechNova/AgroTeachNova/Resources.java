@@ -62,6 +62,6 @@ public class Resources {
 		this.idresourceType = idresourceType;
 	}
 
-    
+  
     
 }

@@ -6,14 +6,14 @@ public class TaskReport {
     private int idtaskReport;
     private String title;
     private String description;
-    private Sysuser idsysuser;
+    private SysUser idsysuser;
     private Date reportDate;
     private Task_has_project projectTaskid;
 
     public TaskReport() {
     }
 
-    public TaskReport(int idtaskReport, String title, String description, Sysuser idsysuser, Date reportDate, Task_has_project projectTaskid) {
+    public TaskReport(int idtaskReport, String title, String description, SysUser idsysuser, Date reportDate, Task_has_project projectTaskid) {
         this.idtaskReport = idtaskReport;
         this.title = title;
         this.description = description;
@@ -46,11 +46,11 @@ public class TaskReport {
         this.description = description;
     }
 
-    public Sysuser getIdsysuser() {
+    public SysUser getIdsysuser() {
         return idsysuser;
     }
 
-    public void setIdsysuser(Sysuser idsysuser) {
+    public void setIdsysuser(SysUser idsysuser) {
         this.idsysuser = idsysuser;
     }
 
