@@ -1,5 +1,6 @@
 package com.AgrotechNova.AgroTeachNova;
 
+import jakarta.persistence.*;
 import java.util.Date;
 
 public class TaskReport {
