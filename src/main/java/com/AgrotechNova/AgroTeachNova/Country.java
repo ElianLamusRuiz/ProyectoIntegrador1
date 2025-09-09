@@ -8,7 +8,7 @@ public class Country {
 	private String name;
 	private String profilePicture;
 	
-	
+	public Country(){}
 	
 	public Country(int idcountry, String name, String profilePicture) {
 		super();
