@@ -9,7 +9,7 @@ public class State {
 	private String profilePicture;
 	private Country country;
 	
-	
+	public State(){}
 	
 	public State(int idstate, String name, String profilePicture, Country country) {
 		super();
