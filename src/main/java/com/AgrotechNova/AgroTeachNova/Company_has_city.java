@@ -1,5 +1,7 @@
 package com.AgrotechNova.AgroTeachNova;
 
+import jakarta.persistence.*;
+
 public class Company_has_city {
 
 	private Company company;
