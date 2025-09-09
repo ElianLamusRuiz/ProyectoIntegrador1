@@ -1,3 +1,4 @@
+package com.AgrotechNova.AgroTeachNova;
 public class ResourceType {
     private int idresourceType;
     private String name;

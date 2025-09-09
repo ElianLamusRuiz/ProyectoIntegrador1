@@ -1,3 +1,5 @@
+package com.AgrotechNova.AgroTeachNova;
+
 public class ServiceType {
     private int idserviceType;
     private String description;

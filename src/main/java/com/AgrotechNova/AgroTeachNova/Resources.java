@@ -1,14 +1,16 @@
+package com.AgrotechNova.AgroTeachNova;
+
 public class Resources {
     private int idresources;
     private String name;
     private String description;
     private float cost;
-    private resourceType idresourceType;
+    private ResourceType idresourceType;
 
-    public resources() {
+    public Resources() {
     }
 
-    public resources(int idresources, String name, String description, float cost, int resourceType_idresourceType) {
+    public Resources(int idresources, String name, String description, float cost, int resourceType_idresourceType) {
         this.idresources = idresources;
         this.name = name;
         this.description = description;
@@ -52,6 +54,14 @@ public class Resources {
         return idresourceType;
     }
 
-    public void ResourceType setIdResourceType() {
-      this.idresourceType = idresourceType;
+	public ResourceType getIdresourceType() {
+		return idresourceType;
+	}
+
+	public void setIdresourceType(ResourceType idresourceType) {
+		this.idresourceType = idresourceType;
+	}
+
+    
+    
 }

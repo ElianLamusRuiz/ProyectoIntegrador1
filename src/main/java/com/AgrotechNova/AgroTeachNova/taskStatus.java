@@ -1,4 +1,6 @@
 
+package com.AgrotechNova.AgroTeachNova;
+
 public class taskStatus {
   private int idtaskStatus;
   private String description;
@@ -26,3 +28,5 @@ public class taskStatus {
   public void setDescription(String description) {
     this.description = description;
   }
+
+}
