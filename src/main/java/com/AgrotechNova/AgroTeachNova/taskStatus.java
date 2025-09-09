@@ -1,5 +1,6 @@
-
 package com.AgrotechNova.AgroTeachNova;
+
+import jakarta.persistence.*;
 
 public class taskStatus {
   private int idtaskStatus;
