@@ -1,5 +1,7 @@
 package com.AgrotechNova.AgroTeachNova;
 
+import jakarta.persistence.*;
+
 public class State {
 
 	private int idstate;
