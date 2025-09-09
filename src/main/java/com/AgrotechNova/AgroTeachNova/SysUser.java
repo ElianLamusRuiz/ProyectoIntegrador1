@@ -13,7 +13,8 @@ public class SysUser {
 	    private UserStatus userStatus;
 	    private Company company;
 	    private UserRole role;
-	   
+
+		public SysUser(){}
 
 		public SysUser(int idsysuser, String userName, String userLastname, String email, String password,
 				UserStatus userStatus, Company company, UserRole role) {
