@@ -20,4 +20,23 @@ public class TaskStatusController {
     public List<TaskStatus> getAllTaskStatus() {
         return taskStatusService.getAll();
     }
+     @GetMapping("/{id}")
+    public TaskStatus getById(@PathVariable Long id) {
+        return taskStatusService.getById(id);
+    }
+
+    @PostMapping
+    public TaskStatus create(@RequestBody TaskStatus body) {
+        return taskStatusService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public TaskStatus update(@PathVariable Long id, @RequestBody TaskStatus body) {
+        return taskStatusService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        taskStatusService.delete(id);
+    }
 }
