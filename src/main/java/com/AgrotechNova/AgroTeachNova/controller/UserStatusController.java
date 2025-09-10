@@ -20,4 +20,23 @@ public class UserStatusController {
     public List<UserStatus> getAllUserStatus() {
         return userStatusService.getAll();
     }
+     @GetMapping("/{id}")
+    public UserStatus getById(@PathVariable Long id) {
+        return userStatusService.getById(id);
+    }
+
+    @PostMapping
+    public UserStatus create(@RequestBody UserStatus body) {
+        return userStatusService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public UserStatus update(@PathVariable Long id, @RequestBody UserStatus body) {
+        return userStatusService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        userStatusService.delete(id);
+    }
 }
