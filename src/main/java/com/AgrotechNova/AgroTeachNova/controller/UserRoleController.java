@@ -20,4 +20,23 @@ public class UserRoleController {
     public List<UserRole> getAllUserRole() {
         return userRoleService.getAll();
     }
+    @GetMapping("/{id}")
+    public UserRole getById(@PathVariable Long id) {
+        return userRoleService.getById(id);
+    }
+
+    @PostMapping
+    public UserRole create(@RequestBody UserRole body) {
+        return userRoleService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public UserRole update(@PathVariable Long id, @RequestBody UserRole body) {
+        return userRoleService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        userRoleService.delete(id);
+    }
 }
