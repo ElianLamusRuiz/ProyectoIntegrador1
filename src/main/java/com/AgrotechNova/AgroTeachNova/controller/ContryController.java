@@ -21,4 +21,23 @@ public class ContryController {
     public List<Country> getAllContry() {
         return ContryService.getAll();
     }
+    @GetMapping("/{id}")
+    public Country getById(@PathVariable Long id) {
+        return ContryService.getById(id);
+    }
+
+    @PostMapping
+    public Country create(@RequestBody Country body) {
+        return ContryService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public Country update(@PathVariable Long id, @RequestBody Country body) {
+        return ContryService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        ContryService.delete(id);
+    } 
 }
