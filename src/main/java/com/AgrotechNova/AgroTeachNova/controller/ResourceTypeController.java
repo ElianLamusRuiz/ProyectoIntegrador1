@@ -20,4 +20,23 @@ public class ResourceTypeController {
     public List<ResourceType> getAllResourceType() {
         return resourceTypeService.getAll();
     }
+    @GetMapping("/{id}")
+    public ResourceType getById(@PathVariable Long id) {
+        return resourceTypeService.getById(id);
+    }
+
+    @PostMapping
+    public ResourceType create(@RequestBody ResourceType body) {
+        return resourceTypeService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public ResourceType update(@PathVariable Long id, @RequestBody ResourceType body) {
+        return resourceTypeService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        resourceTypeService.delete(id);
+    }
 }
