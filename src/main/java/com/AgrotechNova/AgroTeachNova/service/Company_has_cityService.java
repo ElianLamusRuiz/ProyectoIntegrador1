@@ -18,4 +18,24 @@ public class Company_has_cityService {
     public List<Company_has_city> getAll() {
         return company_Has_CityRepository.findAll();
     }
+    public Company_has_city getById(Long id) {
+        return company_Has_CityRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Company_has_city not found"));
+    }
+
+    public Company_has_city create(Company_has_city companyHasCity) {
+        return company_Has_CityRepository.save(companyHasCity);
+    }
+
+    public Company_has_city update(Long id, Company_has_city companyHasCity) {
+        Company_has_city existing = getById(id);
+        // Ajusta estos setters según los campos que tenga tu entidad Company_has_city
+        existing.setCompany(companyHasCity.getCompany());
+        existing.setCity(companyHasCity.getCity());
+        return company_Has_CityRepository.save(existing);
+    }
+
+    public void delete(Long id) {
+        company_Has_CityRepository.deleteById(id);
+    }
 }
