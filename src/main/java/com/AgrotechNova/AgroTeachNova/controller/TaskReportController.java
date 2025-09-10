@@ -20,4 +20,23 @@ public class TaskReportController {
     public List<TaskReport> getAllTaskReport() {
         return taskReportService.getAll();
     }
+    @GetMapping("/{id}")
+    public TaskReport getById(@PathVariable Long id) {
+        return taskReportService.getById(id);
+    }
+
+    @PostMapping
+    public TaskReport create(@RequestBody TaskReport body) {
+        return taskReportService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public TaskReport update(@PathVariable Long id, @RequestBody TaskReport body) {
+        return taskReportService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        taskReportService.delete(id);
+    }
 }
