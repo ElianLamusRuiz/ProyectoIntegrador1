@@ -20,4 +20,23 @@ public class Sysuser_has_task_has_projectController {
     public List<Sysuser_has_task_has_project> getAllSysuser_has_task_has_project() {
         return sysuser_has_task_has_projectService.getAll();
     }
+    @GetMapping("/{id}")
+    public Sysuser_has_task_has_project getById(@PathVariable Long id) {
+        return sysuser_has_task_has_projectService.getById(id);
+    }
+
+    @PostMapping
+    public Sysuser_has_task_has_project create(@RequestBody Sysuser_has_task_has_project body) {
+        return sysuser_has_task_has_projectService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public Sysuser_has_task_has_project update(@PathVariable Long id, @RequestBody Sysuser_has_task_has_project body) {
+        return sysuser_has_task_has_projectService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        sysuser_has_task_has_projectService.delete(id);
+    }
 }
