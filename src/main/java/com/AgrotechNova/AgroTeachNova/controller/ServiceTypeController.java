@@ -20,4 +20,23 @@ public class ServiceTypeController {
     public List<ServiceType> getAllServiceType() {
         return serviceTypeService.getAll();
     }
+    @GetMapping("/{id}")
+    public ServiceType getById(@PathVariable Long id) {
+        return serviceTypeService.getById(id);
+    }
+
+    @PostMapping
+    public ServiceType create(@RequestBody ServiceType body) {
+        return serviceTypeService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public ServiceType update(@PathVariable Long id, @RequestBody ServiceType body) {
+        return serviceTypeService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        serviceTypeService.delete(id);
+    }
 }
