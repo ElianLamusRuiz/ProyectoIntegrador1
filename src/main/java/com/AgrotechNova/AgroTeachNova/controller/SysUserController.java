@@ -21,4 +21,23 @@ public class SysUserController {
     public List<SysUser> getAllUsers() {
         return sysUserService.getAllUsers();
     }
+    @GetMapping("/{id}")
+    public SysUser getById(@PathVariable Long id) {
+        return sysUserService.getById(id);
+    }
+
+    @PostMapping
+    public SysUser create(@RequestBody SysUser body) {
+        return sysUserService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public SysUser update(@PathVariable Long id, @RequestBody SysUser body) {
+        return sysUserService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        sysUserService.delete(id);
+    }
 }
