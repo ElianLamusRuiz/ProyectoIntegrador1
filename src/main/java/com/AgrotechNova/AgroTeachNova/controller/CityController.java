@@ -21,4 +21,24 @@ public class CityController {
     public List<City> getAllCities() {
         return CityService.getAll();
     }
+@GetMapping("/{id}")
+    public City getById(@PathVariable Long id) {
+        return CityService.getById(id);
+    }
+
+    @PostMapping
+    public City create(@RequestBody City body) {
+        return CityService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public City update(@PathVariable Long id, @RequestBody City body) {
+        return CityService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        CityService.delete(id);
+    }
+    
 }
