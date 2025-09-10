@@ -20,4 +20,23 @@ public class Task_has_projectController {
     public List<Task_has_project> getAllTask_has_project() {
         return task_has_projectService.getAll();
     }
+     @GetMapping("/{id}")
+    public Task_has_project getById(@PathVariable Long id) {
+        return task_has_projectService.getById(id);
+    }
+
+    @PostMapping
+    public Task_has_project create(@RequestBody Task_has_project body) {
+        return task_has_projectService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public Task_has_project update(@PathVariable Long id, @RequestBody Task_has_project body) {
+        return task_has_projectService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        task_has_projectService.delete(id);
+    }
 }
