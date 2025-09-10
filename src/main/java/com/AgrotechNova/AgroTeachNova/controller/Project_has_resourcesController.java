@@ -20,4 +20,23 @@ public class Project_has_resourcesController {
     public List<Project_has_resources> getAllProject_has_resources() {
         return project_has_resourcesService.getAll();
     }
+    @GetMapping("/{id}")
+    public Project_has_resources getById(@PathVariable Long id) {
+        return project_has_resourcesService.getById(id);
+    }
+
+    @PostMapping
+    public Project_has_resources create(@RequestBody Project_has_resources body) {
+        return project_has_resourcesService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public Project_has_resources update(@PathVariable Long id, @RequestBody Project_has_resources body) {
+        return project_has_resourcesService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        project_has_resourcesService.delete(id);
+    }
 }
