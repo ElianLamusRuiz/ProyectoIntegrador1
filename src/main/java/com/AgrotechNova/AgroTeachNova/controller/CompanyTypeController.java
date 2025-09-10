@@ -21,4 +21,23 @@ public class CompanyTypeController {
     public List<CompanyType> getAllCompanyType() {
         return companyTypeService.getAll(); // 👈 ahora sí correcto
     }
+     @GetMapping("/{id}")
+    public CompanyType getById(@PathVariable Long id) {
+        return companyTypeService.getById(id);
+    }
+
+    @PostMapping
+    public CompanyType create(@RequestBody CompanyType body) {
+        return companyTypeService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public CompanyType update(@PathVariable Long id, @RequestBody CompanyType body) {
+        return companyTypeService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        companyTypeService.delete(id);
+    }
 }
