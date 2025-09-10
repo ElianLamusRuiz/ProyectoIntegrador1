@@ -19,4 +19,26 @@ public class SysUserService {
     public List<SysUser> getAllUsers() {
         return sysUserRepository.findAll();
     }
+    public SysUser getById(Long id) {
+        return sysUserRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+    }
+
+    public SysUser create(SysUser user) {
+        return sysUserRepository.save(user);
+    }
+
+    public SysUser update(Long id, SysUser user) {
+        SysUser existing = getById(id);
+        // Ajusta estos setters según los atributos reales de tu entidad SysUser
+        existing.setUsername(user.getUsername());
+        existing.setPassword(user.getPassword());
+        existing.setEmail(user.getEmail());
+        existing.setRole(user.getRole());
+        return sysUserRepository.save(existing);
+    }
+
+    public void delete(Long id) {
+        sysUserRepository.deleteById(id);
+    }
 }
