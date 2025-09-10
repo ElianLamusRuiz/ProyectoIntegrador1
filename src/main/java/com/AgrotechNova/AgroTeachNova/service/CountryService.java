@@ -18,4 +18,23 @@ public class CountryService {
     public List<Country> getAll() {
         return countryRepository.findAll();
     }
+    public Country getById(Long id) {
+        return countryRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Country not found"));
+    }
+
+    public Country create(Country country) {
+        return countryRepository.save(country);
+    }
+
+    public Country update(Long id, Country country) {
+        Country existing = getById(id);
+        existing.setName(country.getName());
+        existing.setCode(country.getCode()); // Ajusta según los campos reales de tu entidad
+        return countryRepository.save(existing);
+    }
+
+    public void delete(Long id) {
+        countryRepository.deleteById(id);
+    }
 }
