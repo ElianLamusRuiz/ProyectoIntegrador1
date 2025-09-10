@@ -20,4 +20,25 @@ public class ServiceService {
     public List<Service> getAll() {
         return serviceRepository.findAll();
     }
+  public Service getById(Long id) {
+        return serviceRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Service not found"));
+    }
+
+    public Service create(Service service) {
+        return serviceRepository.save(service);
+    }
+
+    public Service update(Long id, Service service) {
+        Service existing = getById(id);
+        // Ajusta estos setters según los atributos reales de tu entidad Service
+        existing.setName(service.getName());
+        existing.setDescription(service.getDescription());
+        existing.setPrice(service.getPrice());
+        return serviceRepository.save(existing);
+    }
+
+    public void delete(Long id) {
+        serviceRepository.deleteById(id);
+    }
 }
