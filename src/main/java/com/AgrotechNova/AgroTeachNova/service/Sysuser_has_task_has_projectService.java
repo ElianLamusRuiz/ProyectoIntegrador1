@@ -18,4 +18,26 @@ public class Sysuser_has_task_has_projectService {
     public List<Sysuser_has_task_has_project> getAll() {
         return sysuser_Has_Task_Has_ProjectRepository.findAll();
     }
+    public Sysuser_has_task_has_project getById(Long id) {
+        return sysuser_Has_Task_Has_ProjectRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Sysuser_has_task_has_project not found"));
+    }
+
+    public Sysuser_has_task_has_project create(Sysuser_has_task_has_project relation) {
+        return sysuser_Has_Task_Has_ProjectRepository.save(relation);
+    }
+
+    public Sysuser_has_task_has_project update(Long id, Sysuser_has_task_has_project relation) {
+        Sysuser_has_task_has_project existing = getById(id);
+        // Ajusta estos setters según los atributos reales de tu entidad Sysuser_has_task_has_project
+        existing.setSysUser(relation.getSysUser());
+        existing.setTask(relation.getTask());
+        existing.setProject(relation.getProject());
+        existing.setRole(relation.getRole());
+        return sysuser_Has_Task_Has_ProjectRepository.save(existing);
+    }
+
+    public void delete(Long id) {
+        sysuser_Has_Task_Has_ProjectRepository.deleteById(id);
+    }
 }
