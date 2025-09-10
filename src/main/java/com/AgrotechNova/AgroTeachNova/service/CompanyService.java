@@ -18,22 +18,23 @@ public class CompanyService {
     public List<Company> getAll() {
         return companyRepository.findAll();
     }
-    public Company getCompanyById(@PathVariable Long id) {
-        return companyService.getById(id);
+    public Company getById(Long id) {
+        return companyRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Company not found"));
     }
 
-    @PostMapping
-    public Company createCompany(@RequestBody Company company) {
-        return companyService.create(company);
+    public Company create(Company company) {
+        return companyRepository.save(company);
     }
 
-    @PutMapping("/{id}")
-    public Company updateCompany(@PathVariable Long id, @RequestBody Company company) {
-        return companyService.update(id, company);
+    public Company update(Long id, Company company) {
+        Company existing = getById(id);
+        existing.setName(company.getName());
+        existing.setDescription(company.getDescription());
+        return companyRepository.save(existing);
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteCompany(@PathVariable Long id) {
-        companyService.delete(id);
+    public void delete(Long id) {
+        companyRepository.deleteById(id);
     }
 }
