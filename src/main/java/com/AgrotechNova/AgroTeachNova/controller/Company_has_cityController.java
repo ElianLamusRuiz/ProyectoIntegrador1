@@ -21,4 +21,24 @@ public class Company_has_cityController {
     public List<Company_has_city> getAllCompany_has_city() {
         return Company_has_cityService.getAll();
     }
+    @GetMapping("/{id}")
+    public Company_has_city getById(@PathVariable Long id) {
+        return Company_has_cityService.getById(id);
+    }
+
+    @PostMapping
+    public Company_has_city create(@RequestBody Company_has_city body) {
+        return Company_has_cityService.create(body);
+    }
+
+    @PutMapping("/{id}")
+    public Company_has_city update(@PathVariable Long id, @RequestBody Company_has_city body) {
+        return Company_has_cityService.update(id, body);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        Company_has_cityService.delete(id);
+    }
+    
 }
